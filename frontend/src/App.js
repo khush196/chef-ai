@@ -1,6 +1,4 @@
-// frontend/src/App.js - Simplified (No Image Generation)
-
-import React, { useState } from 'react'; // Removed useEffect if not needed elsewhere
+import React, { useState } from 'react'; 
 import './App.css';
 
 function App() {
@@ -12,8 +10,7 @@ function App() {
     // Use simpler names now
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
-    const [recipeType, setRecipeType] = useState('veg'); // Add this line, default to 'veg'
-
+    const [recipeType, setRecipeType] = useState('veg'); 
 
   
 
