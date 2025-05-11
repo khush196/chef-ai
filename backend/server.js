@@ -22,7 +22,7 @@ if (!geminiApiKey) {
     process.exit(1);
 }
 const genAI = new GoogleGenerativeAI(geminiApiKey);
-const geminiModel = genAI.getGenerativeModel({ model: "gemini-2.0-flash" }); // Or your preferred model
+const geminiModel = genAI.getGenerativeModel({ model: "gemini-2.0-flash" }); // 
 console.log("Google Gemini AI client initialized.");
 
 // --- 6. Define API Endpoint for Recipe Generation ---
@@ -121,7 +121,7 @@ ${dietConstraint}
 \`\`\`
 
 **FINAL CHECK:** Review your generated output. Is it valid JSON? Does it contain ONLY the JSON object? Does it meet all the constraints and guidelines? Generate the recipe now.`;
-        // console.log("--- PROMPT START ---\n", prompt, "\n--- PROMPT END ---"); // Keep for debugging if needed
+        // console.log("--- PROMPT START ---\n", prompt, "\n--- PROMPT END ---");
         console.log("Sending prompt to Gemini AI...");
 
         const result = await geminiModel.generateContent(prompt);
@@ -129,7 +129,7 @@ ${dietConstraint}
         const text = response.text();
 
         console.log("Received response from Gemini AI.");
-        // console.log("--- GEMINI RAW RESPONSE START ---\n", text, "\n--- GEMINI RAW RESPONSE END ---"); // Keep for debugging if needed
+        // console.log("--- GEMINI RAW RESPONSE START ---\n", text, "\n--- GEMINI RAW RESPONSE END ---"); 
 
         let recipeJson;
         try {
