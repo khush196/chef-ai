@@ -39,7 +39,7 @@ app.post('/api/generate-recipe', async (req, res) => {
         }
 
          // --- Modify Prompt Construction ---
-         let dietConstraint = ""; // Variable to hold the specific instruction
+         let dietConstraint = ""; 
 
          if (recipeType === 'veg') {
              dietConstraint = `The recipe MUST be strictly vegetarian. Do not include any meat, poultry, or fish. Eggs and dairy are not acceptable in any condition in the 'Available Ingredients' . Assume basic vegetable oil, salt, pepper, water.`;}
@@ -129,8 +129,7 @@ ${dietConstraint}
         const text = response.text();
 
         console.log("Received response from Gemini AI.");
-        // console.log("--- GEMINI RAW RESPONSE START ---\n", text, "\n--- GEMINI RAW RESPONSE END ---"); 
-
+        
         let recipeJson;
         try {
             const jsonStart = text.indexOf('{');
