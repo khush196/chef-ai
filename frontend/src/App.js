@@ -34,7 +34,7 @@ function App() {
         setRecipe(null);
         setError(null);
         
-        setIsLoading(true); // Start loading
+        setIsLoading(true); 
 
         const requestData = { ingredients, prepTime, servings,  recipeType: recipeType  };
 
@@ -51,15 +51,14 @@ function App() {
             }
 
             const recipeData = await response.json();
-            setRecipe(recipeData); // Store the received recipe
+            setRecipe(recipeData); 
 
-            // REMOVED: Call to generateImage
 
         } catch (err) {
             console.error("Error fetching recipe:", err);
             setError(err.message || 'An unexpected error occurred fetching the recipe.');
         } finally {
-            setIsLoading(false); // Stop loading
+            setIsLoading(false); 
         }
     };
 
